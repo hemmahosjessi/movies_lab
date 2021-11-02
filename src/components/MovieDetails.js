@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import { DETAILS_URL } from 'utils/urls'
+import BackButton from './BackButton'
 
 const MovieDetails = () => {
     const [movie, setMovie] = useState ([])
@@ -16,6 +17,7 @@ const MovieDetails = () => {
         <div>
             <div key={movie.original_title}>
                 <img className='background' src={`http://image.tmdb.org/t/p/w500${movie.backdrop_path}`} alt={movie.title}/>
+                <BackButton />
                 <div className='posteranddetails'>
                     <img src={`https://image.tmdb.org/t/p/w400${movie.poster_path}`}/>
                     <div className='overlay-content'>
@@ -33,3 +35,8 @@ const MovieDetails = () => {
 
 
 export default MovieDetails 
+
+
+
+
+
