@@ -1,13 +1,16 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
 
 import Movies from './components/Movies'
 import MovieDetails from './components/MovieDetails'
+import Header from 'components/Header'
 
 
 export const App = () => {
 
   return (
+    <>
+    <Header />
     <BrowserRouter>
       <Switch>
         <Route path='/' exact>
@@ -18,6 +21,7 @@ export const App = () => {
         </Route>
       </Switch>
      </BrowserRouter>
+     </>
   )
 }
 

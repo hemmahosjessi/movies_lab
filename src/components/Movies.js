@@ -18,14 +18,13 @@ const Movies = () => {
                     <Link key={movie.id} to={`/movies/${movie.id}`}>
                         <img src={`https://image.tmdb.org/t/p/w400${movie.poster_path}`}/>
                         <div className='overlay'>
-                            <div className='details'>
+                            <div className='text'>
                                 <h3>{movie.original_title}</h3>
                                 <h4>Relased {movie.release_date}</h4>
                             </div>
                         </div>
                     </Link>
                 </div>
-
                
 ))}
          </section>
