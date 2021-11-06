@@ -13,11 +13,16 @@ font-weight: 700;
 text-decoration: none;
 left: 4rem;
 top: 4rem;
-background-color: #1a1a1a;
+background-color: #333;
 border-radius: 22px;
 height: 44px;
 padding: 0.5rem 1.5rem 0.5rem 0.5rem;
 font-family: Roboto;
+transition: 0.3s;
+&:hover {
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
 
 @media (max-width: 767px) {
 left: 1rem;
