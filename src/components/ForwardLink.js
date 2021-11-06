@@ -17,10 +17,10 @@ height: 56px;
 padding: 0.5rem 0.5rem 0.5rem 1rem;
 font-family: Roboto;
 margin-top: 3rem;
+transition: 0.5s;
 &:hover {
   background-color: #1a1a1a;
-  // color: #333;
-  border: 3px dotted #e6e230;
+  border: 2px dotted #e6e230;
   animation: bounce 1s;
 
   @keyframes bounce {
@@ -53,7 +53,7 @@ const ForwardButton = () => {
 
   return (
     <div className='button-hover'>
-        <ForwardLink exact to="/movies">
+        <ForwardLink to="/movies">
         Let's choose a movie! <ForwardIcon /> 
         </ForwardLink>
     </div>

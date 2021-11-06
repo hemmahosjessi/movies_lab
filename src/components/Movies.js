@@ -36,7 +36,7 @@ const Movies = () => {
             {movies.map((movie) => (
                 <div className='movie-item'>
                     <Link key={movie.id} to={`/movies/${movie.id}`}>
-                        <img src={`https://image.tmdb.org/t/p/w400${movie.poster_path}`}/>
+                        <img src={`https://image.tmdb.org/t/p/w400${movie.poster_path}`} alt={movie.original_title}/>
                         <div className='overlay'>
                             <div className='text'>
                                 <h3>{movie.original_title}</h3>

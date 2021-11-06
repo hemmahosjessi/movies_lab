@@ -23,7 +23,7 @@ transition: 0.3s;
   -webkit-transform: scale(1.1);
   -ms-transform: scale(1.1);
   transform: scale(1.1);
-
+}
 @media (max-width: 767px) {
 left: 1rem;
 top: 1.5rem;

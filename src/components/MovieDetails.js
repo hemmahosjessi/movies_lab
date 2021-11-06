@@ -43,7 +43,7 @@ const MovieDetails = () => {
                 </div> 
                 
                 <div className='posteranddetails'>
-                    <img className='poster' src={`https://image.tmdb.org/t/p/w400${movie.poster_path}`}/>
+                    <img className='poster' src={`https://image.tmdb.org/t/p/w400${movie.poster_path}`} alt={movie.original_title}/>
                     <div className='details'>
                         <div className='title-score'>
                             {/* <h5>Spoken language {movie.budget}</h5> */}
