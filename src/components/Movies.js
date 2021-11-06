@@ -34,8 +34,8 @@ const Movies = () => {
         </div>
         <section className='movie-container'>
             {movies.map((movie) => (
-                <div className='movie-item'>
-                    <Link key={movie.id} to={`/movies/${movie.id}`}>
+                <div key={movie.id} className='movie-item'>
+                    <Link  to={`/movies/${movie.id}`}>
                         <img src={`https://image.tmdb.org/t/p/w400${movie.poster_path}`} alt={movie.original_title}/>
                         <div className='overlay'>
                             <div className='text'>
