@@ -26,12 +26,12 @@ top: 1.5rem;
 `
 
 
-const BackButton = () => {
+const BackToStartButton = () => {
 
   return (
-    <div className='back-overview'>
-        <StyledLink to="/movies">
-            <BackIcon /> Back to overview
+    <div className='back-start'>
+        <StyledLink to="/">
+            <BackIcon /> Back to Startpage
         </StyledLink>
     </div>
   )
@@ -39,4 +39,4 @@ const BackButton = () => {
   };
   
 
-  export default BackButton
+  export default BackToStartButton

@@ -1,17 +1,37 @@
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { MOVIES_URL } from 'utils/urls';
+import BackToStartButton from './BackToStartButton';
+import LoadingPage from './LoadingPage';
 
 const Movies = () => {
     const [movies, setMovies] = useState([]);
+    const [loading, setLoading] = useState(true);
 
-	useEffect(() => {
-		fetch(MOVIES_URL)
-			.then((res) => res.json())
-			.then((data) => setMovies(data.results));
-	}, []);
+	// useEffect(() => {
+	// 	fetch(MOVIES_URL)
+	// 		.then((res) => res.json())
+	// 		.then((data) => setMovies(data.results));
+	// }, []);
+
+
+    useEffect(() => {
+        setLoading(true);
+        fetch(MOVIES_URL)
+        .then(res => res.json())
+        .then((data) => {
+            setTimeout(() => {
+            setLoading(false)
+            setMovies(data.results)
+            }, 1200)
+      })}, [])
 
     return (
+        <>
+        {loading && <LoadingPage />}
+        <div className='top-area'>
+        <BackToStartButton />
+        </div>
         <section className='movie-container'>
             {movies.map((movie) => (
                 <div className='movie-item'>
@@ -28,11 +48,12 @@ const Movies = () => {
                
 ))}
          </section>
-
+         </>
          
 
     )
 }
+
 
 
 export default Movies
