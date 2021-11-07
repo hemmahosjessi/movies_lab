@@ -17,7 +17,7 @@ background-color: #333;
 border-radius: 22px;
 height: 44px;
 padding: 0.5rem 1.5rem 0.5rem 0.5rem;
-font-family: Roboto;
+font-family: Poppins;
 transition: 0.3s;
 &:hover {
     -webkit-transform: scale(1.1);

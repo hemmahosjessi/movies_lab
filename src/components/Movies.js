@@ -26,6 +26,7 @@ const Movies = () => {
             }, 1200)
       })}, [])
 
+
     return (
         <>
         {loading && <LoadingPage />}

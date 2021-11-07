@@ -19,6 +19,7 @@ const MovieDetails = () => {
     //     .finally(() => setLoading(false))
     // )}, [id])
 
+
         useEffect(() => {
         setLoading(true);
         fetch(DETAILS_URL(id))
@@ -29,8 +30,6 @@ const MovieDetails = () => {
             setMovie(data)
             }, 1200)
       })}, [id])
-
-
 
 
     return (
